@@ -15,7 +15,6 @@ export function activate(context: vscode.ExtensionContext) {
 
     selectedFiles.forEach((selection) => {
       const fileContent = Buffer.from(fs.readFileSync(selection)).toString();
-      concatenatedContent.push(`[ File: ${selection} ]`);
       concatenatedContent.push(fileContent);
     });
 
